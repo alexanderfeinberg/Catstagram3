@@ -31,4 +31,4 @@ By the end of day 3, you should have the following features implemented:
 
 Great job on implementing all the core features of Catstagram!
 
-[starter]: https://github.com/appacademy/practice-for-week-09-catstagram-long-practice-day-3
+[starter]: https://github.com/appacademy/practice-for-week-09-catsagram-long-practice-day-3
