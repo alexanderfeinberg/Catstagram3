@@ -9,6 +9,10 @@ every time your reload the page.
 You can either build off your Catsagram project from the previous days or
 clone the practice for this day from the [starter].
 
+Run `node app.js` from the base directory to start the server which will serve
+the static assets in the practice. Navigate to [http://localhost:5000] in your
+browser to see the __public/index.html__ file rendered.
+
 ## Instructions
 
 Store the state of the information about the current image, the upvote counter,
@@ -32,3 +36,4 @@ By the end of day 3, you should have the following features implemented:
 Great job on implementing all the core features of Catstagram!
 
 [starter]: https://github.com/appacademy/practice-for-week-09-catsagram-long-practice-day-3
+[http://localhost:5000]: http://localhost:5000
