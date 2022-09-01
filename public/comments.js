@@ -6,6 +6,13 @@ export const createCommentSection = () => {
 
     container.appendChild(commentForm);
     container.appendChild(commentsList);
+    const commentStorageItem = localStorage.getItem("comment")
+    if(commentStorageItem) {
+        const commentArray = commentStorageItem.split(";")
+        commentArray.forEach(comment => {
+            createComment(comment)
+        })
+    } 
 };
 
 const createCommentsList = () => {
@@ -18,6 +25,7 @@ const createCommentsList = () => {
     comments.style.margin = "10px";
     comments.style.padding = "5px";
     comments.style.overflow = "scroll";
+
 
     return comments;
 };
@@ -95,15 +103,43 @@ const createComment = (commentText) => {
     deleteButton.addEventListener('click', e => {
         // Remove comment from HTML DOM
         newCommentContainer.remove();
+        let comments = localStorage.getItem("comment").split(";")
+        comments.find((comment, i )=> {
+            // console.log("comment", comment)
+            // console.log("new comment", newComment.innerText)
+            if(comment === newComment.innerText) {
+                comments.splice(i, 1)
+                console.log(comment)
+                commentStorage(comments)
+            }
+        })
     });
 
     newCommentContainer.appendChild(newComment);
     newCommentContainer.appendChild(deleteButton);
     const comments = document.querySelector(".comments");
     comments.appendChild(newCommentContainer);
+
+    const getComment = document.querySelectorAll("div > p");
+
+    commentStorage(getComment);
+    
+    
 };
 
 
+const commentStorage = (getComment) => {
+    console.log(getComment)
+    const textArray = []
+    getComment.forEach(comment => {
+        if(typeof comment === "string"){
+            textArray.push(comment)
+        } else {
+            textArray.push(comment.innerText)
+        }
+    })
+    localStorage.setItem("comment", textArray.join(";"))
+}
 export const resetComments = () => {
     const comments = document.querySelector(".comments");
     Array.from(comments.children).forEach(child => child.remove());

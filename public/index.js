@@ -11,11 +11,18 @@ const initializePage = () => {
     container.style.alignItems = "center";
     container.style.marginTop = "20px";
     document.body.appendChild(container);
+
 };
+
+
+
 
 window.onload = () => {
     initializePage();
     createMainContent();
     createScoreContainer();
     createCommentSection();
+    
+
+    
 };

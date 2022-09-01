@@ -18,7 +18,18 @@ export const createMainContent = () => {
     container.append(newKittenBtn);
     container.appendChild(img);
 
-    fetchImage();
+    const picture = localStorage.getItem("picture");
+    if (picture) {
+      const image = document.body.querySelector("img");
+      image.setAttribute("src", picture);
+
+    //    const reset = document.body.getElementsByClassName("score");
+       
+    } else {
+      fetchImage();
+      resetScore();
+    }
+   
 };
 
 const fetchImage = async () => {
@@ -36,6 +47,8 @@ const fetchImage = async () => {
         kittenImg.addEventListener('load', () => {
             resetScore();
             resetComments();
+            const picStorage = localStorage.setItem("picture", kittenImgUrl)
+
         });
     } catch (e) {
         console.log("Failed to fetch image", e);

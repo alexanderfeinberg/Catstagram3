@@ -27,7 +27,14 @@ const createScoreDisplay = () => {
 
     const score = document.createElement("span");
     score.className = "score";
-    score.innerText = "0";
+    
+
+    const scoreStorage = localStorage.getItem("score");
+    if(scoreStorage) {
+        score.innerText = scoreStorage
+    } else {
+        score.innerText = "0";
+    };
 
     scoreDisplay.appendChild(scoreTitle);
     scoreDisplay.appendChild(score);
@@ -68,6 +75,11 @@ const vote = e => {
     
     // update score
     updateScore(newScore);
+
+    // const picture = localStorage.getItem("picture")
+    // const downVoteStorage = localStorage.getItem("picture")
+
+    
 };
 
 export const resetScore = () => {
@@ -77,5 +89,6 @@ export const resetScore = () => {
 
 const updateScore = (newScore) => {
     const score = document.querySelector('.score');
+    localStorage.setItem(`score`, parseInt(newScore));
     score.innerText = newScore;
 };
