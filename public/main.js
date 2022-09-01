@@ -24,12 +24,12 @@ export const createMainContent = () => {
       image.setAttribute("src", picture);
 
     //    const reset = document.body.getElementsByClassName("score");
-       
+
     } else {
       fetchImage();
       resetScore();
     }
-   
+
 };
 
 const fetchImage = async () => {
@@ -59,7 +59,9 @@ const createNewKittenBtn = () => {
     // Create "New Kitten" button
     const newKittenBtn = document.createElement("button");
     newKittenBtn.id = "new-kitten";
-    newKittenBtn.innerText = "New Kitten";
+    // newKittenBtn.setAttribute("type", "img")
+    // newKittenBtn.innerHTML = '<img src="https://www.clipartmax.com/png/middle/269-2695857_cat-icons-cat-face-icon-png.png">'
+    newKittenBtn.innerHTML = '<i class="fa fa-home"></i>New Kitten';
     newKittenBtn.addEventListener('click', fetchImage);
     return newKittenBtn;
 };

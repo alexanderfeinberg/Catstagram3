@@ -27,7 +27,7 @@ const createScoreDisplay = () => {
 
     const score = document.createElement("span");
     score.className = "score";
-    
+
 
     const scoreStorage = localStorage.getItem("score");
     if(scoreStorage) {
@@ -72,14 +72,14 @@ const vote = e => {
     } else {
         newScore = parseInt(newScore) - 1;
     }
-    
+
     // update score
     updateScore(newScore);
 
     // const picture = localStorage.getItem("picture")
     // const downVoteStorage = localStorage.getItem("picture")
 
-    
+
 };
 
 export const resetScore = () => {

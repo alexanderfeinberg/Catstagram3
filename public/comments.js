@@ -12,7 +12,7 @@ export const createCommentSection = () => {
         commentArray.forEach(comment => {
             createComment(comment)
         })
-    } 
+    }
 };
 
 const createCommentsList = () => {
@@ -93,8 +93,13 @@ const createComment = (commentText) => {
     newCommentContainer.style.display = "flex";
     newCommentContainer.style.margin = "10px";
 
+
     const newComment = document.createElement("p");
     newComment.innerText = commentText;
+    // const profilePic = document.createElement('img')
+    // profilePic.setAttribute('src','cat.png')
+    // newComment.appendChild(profilePic)
+
 
     const deleteButton = document.createElement('button');
     deleteButton.className = "delete-button";
@@ -123,8 +128,8 @@ const createComment = (commentText) => {
     const getComment = document.querySelectorAll("div > p");
 
     commentStorage(getComment);
-    
-    
+
+
 };
 
 

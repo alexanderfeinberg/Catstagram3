@@ -1,0 +1,46 @@
+body{
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* #new-kitten{
+   background-image: url("https://w7.pngwing.com/pngs/369/628/png-transparent-whiskers-black-cat-logo-computer-icons-cat-mammal-animals-cat-like-mammal-thumbnail.png");
+    background-size: 50px;
+} */
+
+button, #submit-comment {
+    border-radius: 20px;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+    padding:5px;
+    margin: 7px;
+}
+#upvote, #downvote{
+    margin:3px 50px;
+}
+
+#user-comment{
+    padding:8px;
+    border: 2px solid #eee;
+    /* box-shadow:0 0 15px 4px rgba(0,0,0,0.06); */
+}
+
+.delete-button{
+    font-size:9px;
+    height:35px;
+    width:55px;
+}
+
+.comments li{
+    /* list-style-image: url('/Users/alexfeinberg/Documents/Catstagram3/images/cat.png'); */
+    border: 2px solid #d807ae;
+    border-radius: 20px;
+    padding:8px;
+}
+
+/* p >img{
+    height:50px;
+    width:50px;
+} */
